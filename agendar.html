@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Aula | FitAgenda</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Fit<span>Agenda</span></a></div>
+    <ul class="nav-links">
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="agendar.html" style="color:var(--neon-nilo);">Agendar Aula</a></li>
+    </ul>
+    <a href="agendar.html" class="btn-nav">Experimentar</a>
+  </nav>
+
+  <section class="section">
+    <div class="booking-container">
+      <div class="booking-info">
+        <h2>Agenda a Tua <span>Sessão</span></h2>
+        <p>Escolhe a melhor data e horário para começar. Receberemos a tua inscrição diretamente no nosso e-mail para confirmar a vaga.</p>
+        
+        <div class="info-list">
+          <p>✔ Atendimento individualizado</p>
+          <p>✔ Avaliação física inicial incluída</p>
+          <p>✔ Plano de treino adaptado à tua rotina</p>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <h3>Formulário de Inscrição</h3>
+        
+        <!-- Envio de e-mail direto via Formspree -->
+        <form action="https://formspree.io/f/xkjjvqky" method="POST">
+          
+          <div class="form-group">
+            <label for="student-name">Nome Completo</label>
+            <input type="text" name="Nome" id="student-name" placeholder="O teu nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="student-email">Teu E-mail</label>
+            <input type="email" name="Email" id="student-email" placeholder="teuemail@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="student-phone">Contacto (WhatsApp)</label>
+            <input type="tel" name="WhatsApp" id="student-phone" placeholder="(00) 00000-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="workout-type">Modalidade Pretendida</label>
+            <select name="Modalidade" id="workout-type">
+              <option value="Musculação Presencial">Musculação Presencial</option>
+              <option value="Treino Funcional">Treino Funcional</option>
+              <option value="Consultoria Online">Consultoria Online</option>
+            </select>
+          </div>
+
+          <div class="form-group row">
+            <div>
+              <label for="date">Data Preferencial</label>
+              <input type="date" name="Data" id="date" required>
+            </div>
+            <div>
+              <label for="time">Hora Preferencial</label>
+              <input type="time" name="Hora" id="time" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary full-width">Enviar e Agendar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Fit<span>Agenda</span> © 2026 • Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

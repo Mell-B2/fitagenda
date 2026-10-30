@@ -3,130 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitAgenda | Personal Training & Performance</title>
+  <title>FitAgenda | Home</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navegação -->
   <nav class="navbar">
-    <div class="logo">Fit<span>Agenda</span></div>
+    <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Fit<span>Agenda</span></a></div>
     <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#agendar">Agendar Aula</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="agendar.html">Agendar Aula</a></li>
     </ul>
-    <a href="#agendar" class="btn-nav">Experimentar</a>
+    <a href="agendar.html" class="btn-nav">Experimentar</a>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <span class="badge-neon">Transforma o Teu Corpo</span>
       <h1>Treino Personalizado & <span>Alta Performance</span></h1>
       <p>Consultoria fitness dedicada aos teus objetivos. Alcança a tua melhor versão com acompanhamento profissional sob medida.</p>
       <div class="hero-buttons">
-        <a href="#agendar" class="btn-primary">Marcar Treino Experimental</a>
-        <a href="#servicos" class="btn-secondary">Ver Planos</a>
+        <a href="agendar.html" class="btn-primary">Marcar Treino Experimental</a>
+        <a href="servicos.html" class="btn-secondary">Ver Planos</a>
       </div>
     </div>
   </header>
 
-  <!-- Sobre -->
-  <section id="sobre" class="section bg-darker">
-    <h2 class="section-title">Sobre a <span>FitAgenda</span></h2>
-    <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-muted);">
-      <p>A FitAgenda oferece programas de treino individualizados com metodologia comprovada para perda de gordura, ganho de massa muscular e melhoria da condição física geral.</p>
-    </div>
-  </section>
-
-  <!-- Serviços -->
-  <section id="servicos" class="section">
-    <h2 class="section-title">Modalidades & <span>Serviços</span></h2>
-    <div class="cards-grid">
-      <div class="card-service">
-        <div class="icon-glow">🏋️‍♂️</div>
-        <h3>Musculação & Hipertrofia</h3>
-        <p>Programas focados em ganho de massa muscular, força e definição com acompanhamento presencial.</p>
-      </div>
-
-      <div class="card-service">
-        <div class="icon-glow">⚡</div>
-        <h3>Treino Funcional & HIIT</h3>
-        <p>Aulas dinâmicas para alta queima calórica, ganho de resistência física e condicionamento.</p>
-      </div>
-
-      <div class="card-service">
-        <div class="icon-glow">📊</div>
-        <h3>Consultoria & Avaliação</h3>
-        <p>Bioimpedância, análise postural e acompanhamento contínuo da tua evolução corporal.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Agendamento Integrado -->
-  <section id="agendar" class="section bg-darker">
-    <div class="booking-container">
-      <div class="booking-info">
-        <h2>Agenda a Tua <span>Sessão</span></h2>
-        <p>Escolhe a melhor data e horário para começar. Entraremos em contacto para confirmar o teu agendamento.</p>
-        
-        <div class="info-list">
-          <p>✔ Atendimento individualizado</p>
-          <p>✔ Avaliação física inicial incluída</p>
-          <p>✔ Plano de treino adaptado à tua rotina</p>
-        </div>
-      </div>
-
-      <div class="booking-card">
-        <h3>Formulário de Marcação</h3>
-        <form id="appointment-form">
-          <div class="form-group">
-            <label for="student-name">Nome Completo</label>
-            <input type="text" id="student-name" placeholder="O teu nome" required>
-          </div>
-
-          <div class="form-group">
-            <label for="student-phone">Contacto (WhatsApp)</label>
-            <input type="tel" id="student-phone" placeholder="(00) 00000-0000" required>
-          </div>
-
-          <div class="form-group">
-            <label for="workout-type">Modalidade Pretendida</label>
-            <select id="workout-type">
-              <option value="Musculação">Musculação Presencial</option>
-              <option value="Treino Funcional">Treino Funcional</option>
-              <option value="Consultoria Online">Consultoria Online</option>
-            </select>
-          </div>
-
-          <div class="form-group row">
-            <div>
-              <label for="date">Data</label>
-              <input type="date" id="date" required>
-            </div>
-            <div>
-              <label for="time">Hora</label>
-              <input type="time" id="time" required>
-            </div>
-          </div>
-
-          <button type="submit" class="btn-primary full-width">Solicitar Agendamento</button>
-        </form>
-
-        <div id="confirmation-message" class="hidden-msg">
-          🎉 Solicitação enviada com sucesso! Entraremos em contacto brevemente.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
   <footer class="footer">
     <p>Fit<span>Agenda</span> © 2026 • Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
