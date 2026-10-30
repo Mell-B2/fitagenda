@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitAgenda - Dashboard Personal Trainer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1>Fit<span>Agenda</span></h1>
+        <p>Gestão Inteligente & Agendamento para Personal Trainers</p>
+      </div>
+      <div class="badge-status">
+        <span class="dot"></span> Sistema Ativo
+      </div>
+    </header>
+
+    <section class="kpi-grid">
+      <div class="card kpi">
+        <h3>Aulas Agendadas</h3>
+        <p id="total-sessoes" class="kpi-value">0</p>
+      </div>
+      <div class="card kpi">
+        <h3>Faturamento Estimado</h3>
+        <p id="faturamento" class="kpi-value neon-text">R$ 0,00</p>
+      </div>
+      <div class="card kpi">
+        <h3>Alunos Ativos</h3>
+        <p id="total-alunos" class="kpi-value">0</p>
+      </div>
+    </section>
+
+    <div class="main-content">
+      <section class="card form-section">
+        <h2>Agendar Novo Treino</h2>
+        <form id="appointment-form">
+          <div class="form-group">
+            <label for="student-name">Nome do Aluno</label>
+            <input type="text" id="student-name" placeholder="Ex: Ana Souza" required>
+          </div>
+
+          <div class="form-group">
+            <label for="workout-type">Tipo de Treino</label>
+            <select id="workout-type">
+              <option value="Musculação">Musculação</option>
+              <option value="Treino Funcional">Treino Funcional</option>
+              <option value="Cardio / HIIT">Cardio / HIIT</option>
+              <option value="Avaliação Física">Avaliação Física</option>
+            </select>
+          </div>
+
+          <div class="form-group row">
+            <div>
+              <label for="date">Data</label>
+              <input type="date" id="date" required>
+            </div>
+            <div>
+              <label for="time">Hora</label>
+              <input type="time" id="time" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="price">Valor da Sessão (R$)</label>
+            <input type="number" id="price" value="80" required>
+          </div>
+
+          <button type="submit" class="btn-primary">Confirmar Agendamento</button>
+        </form>
+      </section>
+
+      <section class="card list-section">
+        <h2>Próximas Aulas</h2>
+        <div id="appointments-list" class="appointments-list"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
