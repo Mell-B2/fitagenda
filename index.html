@@ -3,53 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitAgenda - Dashboard Personal Trainer</title>
+  <title>FitAgenda | Personal Training & Performance</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div>
-        <h1>Fit<span>Agenda</span></h1>
-        <p>Gestão Inteligente & Agendamento para Personal Trainers</p>
-      </div>
-      <div class="badge-status">
-        <span class="dot"></span> Sistema Ativo
-      </div>
-    </header>
 
-    <section class="kpi-grid">
-      <div class="card kpi">
-        <h3>Aulas Agendadas</h3>
-        <p id="total-sessoes" class="kpi-value">0</p>
-      </div>
-      <div class="card kpi">
-        <h3>Faturamento Estimado</h3>
-        <p id="faturamento" class="kpi-value neon-text">R$ 0,00</p>
-      </div>
-      <div class="card kpi">
-        <h3>Alunos Ativos</h3>
-        <p id="total-alunos" class="kpi-value">0</p>
-      </div>
-    </section>
+  <!-- Navegação -->
+  <nav class="navbar">
+    <div class="logo">Fit<span>Agenda</span></div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#agendar">Agendar Aula</a></li>
+    </ul>
+    <a href="#agendar" class="btn-nav">Experimentar</a>
+  </nav>
 
-    <div class="main-content">
-      <section class="card form-section">
-        <h2>Agendar Novo Treino</h2>
+  <!-- Hero Section (Banner Inicial) -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge-neon">Transforma o Teu Corpo</span>
+      <h1>Treino Personalizado & <span>Alta Performance</span></h1>
+      <p>Consultoria fitness dedicada aos teus objetivos. Alcança a tua melhor versão com acompanhamento profissional sob medida.</p>
+      <div class="hero-buttons">
+        <a href="#agendar" class="btn-primary">Marcar Treino Experimental</a>
+        <a href="#servicos" class="btn-secondary">Ver Planos</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Serviços -->
+  <section id="servicos" class="section">
+    <h2 class="section-title">Modalidades & <span>Serviços</span></h2>
+    <div class="cards-grid">
+      <div class="card-service">
+        <div class="icon-glow">🏋️‍♂️</div>
+        <h3>Musculação & Hipertrofia</h3>
+        <p>Programas focados em ganho de massa muscular, força e definição com acompanhamento presencial.</p>
+      </div>
+
+      <div class="card-service">
+        <div class="icon-glow">⚡</div>
+        <h3>Treino Funcional & HIIT</h3>
+        <p>Aulas dinâmicas para alta queima calórica, ganho de resistência física e condicionamento.</p>
+      </div>
+
+      <div class="card-service">
+        <div class="icon-glow">📊</div>
+        <h3>Consultoria & Avaliação</h3>
+        <p>Bioimpedância, análise postural e acompanhamento contínuo da tua evolução corporal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agendamento Integrado -->
+  <section id="agendar" class="section bg-darker">
+    <div class="booking-container">
+      <div class="booking-info">
+        <h2>Agenda a Tua <span>Sessão</span></h2>
+        <p>Escolhe a melhor data e horário para começar. Entraremos em contacto para confirmar o teu agendamento.</p>
+        
+        <div class="info-list">
+          <p>✔ Atendimento individualizado</p>
+          <p>✔ Avaliação física inicial incluída</p>
+          <p>✔ Plano de treino adaptado à tua rotina</p>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <h3>Formulário de Marcação</h3>
         <form id="appointment-form">
           <div class="form-group">
-            <label for="student-name">Nome do Aluno</label>
-            <input type="text" id="student-name" placeholder="Ex: Ana Souza" required>
+            <label for="student-name">Nome Completo</label>
+            <input type="text" id="student-name" placeholder="O teu nome" required>
           </div>
 
           <div class="form-group">
-            <label for="workout-type">Tipo de Treino</label>
+            <label for="student-phone">Contacto (WhatsApp)</label>
+            <input type="tel" id="student-phone" placeholder="(00) 00000-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="workout-type">Modalidade Pretendida</label>
             <select id="workout-type">
-              <option value="Musculação">Musculação</option>
+              <option value="Musculação">Musculação Presencial</option>
               <option value="Treino Funcional">Treino Funcional</option>
-              <option value="Cardio / HIIT">Cardio / HIIT</option>
-              <option value="Avaliação Física">Avaliação Física</option>
+              <option value="Consultoria Online">Consultoria Online</option>
             </select>
           </div>
 
@@ -64,21 +104,20 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="price">Valor da Sessão (R$)</label>
-            <input type="number" id="price" value="80" required>
-          </div>
-
-          <button type="submit" class="btn-primary">Confirmar Agendamento</button>
+          <button type="submit" class="btn-primary full-width">Solicitar Agendamento</button>
         </form>
-      </section>
 
-      <section class="card list-section">
-        <h2>Próximas Aulas</h2>
-        <div id="appointments-list" class="appointments-list"></div>
-      </section>
+        <div id="confirmation-message" class="hidden-msg">
+          🎉 Solicitação enviada com sucesso! Entraremos em contacto brevemente.
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>Fit<span>Agenda</span> © 2026 • Todos os direitos reservados.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
